@@ -2,13 +2,5 @@
 server/node_modules/
 server/*.db
 server/.env
-
+# Node.js
 # OS
-.DS_Store
-Thumbs.db
-
-# 기타
-*.log
-
-# GitHub Pages에 포함하지 않을 폴더
-server/
