@@ -120,6 +120,12 @@ app.post('/api/posts', async (req, res) => {
   res.json({ id: result.lastID, writer, content, created_at });
 });
 
+
+// 루트 경로에서 index.html 반환
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
 initDB().then(() => {
   app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
