@@ -1,1 +1,502 @@
-<!-- 이동된 unit-info.html, 기존 내용 복사 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>평형안내 | 장미연립 재건축</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Pretendard', 'Noto Sans KR', Arial, sans-serif;
+      background: #f7f7fa;
+      color: #222;
+    }
+    .unit-hero {
+      background: linear-gradient(120deg, #b51f5a 60%, #ffdde4 100%);
+      color: #fff;
+        padding: 32px 0 18px 0;
+      text-align: center;
+      position: relative;
+      margin-top: 0 !important;
+      border-top: none !important;
+    }
+    .unit-hero-title {
+      font-size: 2.3rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+    }
+    .unit-hero-desc {
+      font-size: 1.18rem;
+      opacity: 0.93;
+      margin-bottom: 0;
+    }
+    .unit-summary {
+      max-width: 900px;
+      margin: -36px auto 32px auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 6px 32px rgba(0,0,0,0.10);
+      padding: 32px 36px 18px 36px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px 0;
+      justify-content: space-between;
+      position: relative;
+      z-index: 1;
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+      border-top: none !important;
+    }
+    .unit-summary-item {
+      flex: 1 1 180px;
+      min-width: 160px;
+      text-align: center;
+      margin: 0 12px;
+    }
+    .unit-summary-title {
+      color: #b51f5a;
+      font-weight: 700;
+      font-size: 1.08rem;
+      margin-bottom: 6px;
+    }
+    .unit-summary-value {
+      font-size: 1.22rem;
+      font-weight: 600;
+      color: #222;
+    }
+    .unit-info-section {
+      max-width: 900px;
+      margin: 0 auto 32px auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 6px 32px rgba(0,0,0,0.10);
+      padding: 36px 36px 18px 36px;
+    }
+    .unit-info-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #b51f5a;
+      margin-bottom: 18px;
+      text-align: center;
+    }
+    .unit-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 24px;
+      background: #faf6fa;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .unit-table th, .unit-table td {
+      padding: 16px 10px;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+    .unit-table th {
+      background: #f3d1e0;
+      color: #b51f5a;
+      font-size: 1.08rem;
+    }
+    .unit-table tr:last-child td {
+      border-bottom: none;
+    }
+    .unit-desc {
+      font-size: 1.08rem;
+      color: #555;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .unit-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+      margin-top: 32px;
+    }
+    .unit-card {
+      background: #fff0f6;
+      border: 1.5px solid #e5b2c7;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(181,31,90,0.07);
+      width: 220px;
+      min-height: 180px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 18px 16px 14px 16px;
+      transition: box-shadow 0.2s;
+      position: relative;
+    }
+    .unit-card-img {
+      width: 100%;
+      max-width: 160px;
+      height: auto;
+      display: block;
+      margin: 0 auto 10px auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(181,31,90,0.08);
+      background: #fff;
+      cursor: pointer;
+    }
+    .unit-card-title {
+      font-weight: 700;
+      color: #b51f5a;
+      font-size: 1.08rem;
+      margin-bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+    .unit-card-body {
+      color: #444;
+      font-size: 0.98rem;
+      width: 100%;
+      text-align: center;
+    }
+    .unit-card:hover {
+      box-shadow: 0 6px 24px rgba(181,31,90,0.13);
+    }
+    @media (max-width: 900px) {
+      .unit-summary, .unit-info-section {
+        padding: 18px 4vw;
+      }
+      .unit-cards {
+        gap: 12px;
+      }
+      .unit-card {
+        width: 100%;
+        min-width: 0;
+        padding: 12px 10px 10px 10px;
+      }
+      .unit-card-img {
+        max-width: 100px;
+      }
+    }
+    /* 이미지 모달 */
+    .img-modal-overlay {
+      position: fixed;
+      z-index: 3000;
+      left: 0; top: 0; width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .img-modal-content {
+      max-width: 135vw;
+      max-height: 80vh;
+      border-radius: 12px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+      background: #fff;
+    }
+    .img-modal-close {
+      position: absolute;
+      top: 32px;
+      right: 48px;
+      color: #fff;
+      font-size: 3rem;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 10;
+      text-shadow: 0 2px 8px #000;
+    }
+    @media (max-width: 700px) {
+      .unit-hero-title { font-size: 1.3rem; }
+      .unit-summary, .unit-info-section { padding: 10px 2vw; }
+      .unit-cards { flex-direction: column; gap: 10px; margin-top: 18px; }
+      .unit-card { width: 100%; min-width: 0; padding: 12px 10px 10px 10px; }
+      .unit-card-img { max-width: 80vw; }
+      .img-modal-close { top: 12px; right: 18px; font-size: 2.2rem; }
+    }
+    /* 메인페이지와 동일한 헤더 스타일 */
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 90px;
+        background-color: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        transition: all 0.4s ease;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    }
+    header.scrolled {
+        height: 70px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+    .logo {
+        font-size: 28px;
+        font-weight: 800;
+        color: #b51f5a;
+        text-shadow: 0 2px 8px rgba(255,255,255,0.7);
+        letter-spacing: -0.5px;
+    }
+    .logo-sub {
+        font-size: 12px;
+        color: #666;
+        margin-left: 10px;
+        font-weight: 400;
+    }
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+    nav ul {
+        display: flex;
+        list-style: none;
+        gap: 40px;
+        margin: 0;
+        padding: 0;
+    }
+    nav a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        font-size: 16px;
+        transition: color 0.3s;
+        position: relative;
+    }
+    nav a:hover {
+        color: #b51f5a;
+    }
+    nav a:after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #b51f5a;
+        transition: width 0.3s;
+    }
+    nav a:hover:after {
+        width: 100%;
+    }
+    .header-contact {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    .contact-btn {
+        padding: 12px 28px;
+        background-color: #b51f5a;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+        font-size: 15px;
+        text-decoration: none;
+    }
+    .contact-btn:hover {
+        background-color: #9c1a4d;
+        transform: translateY(-2px);
+    }
+    @media (max-width: 1200px) {
+        .logo { font-size: 3.8rem; }
+        .nav-container { padding: 0 30px; }
+    }
+    @media (max-width: 992px) {
+        .logo { font-size: 3.2rem; }
+        .nav-container { padding: 0 30px; }
+        nav ul { gap: 25px; }
+    }
+    @media (max-width: 768px) {
+        .logo { font-size: 2.8rem; }
+        nav { display: none; }
+    }
+    @media (max-width: 576px) {
+        .logo { font-size: 2.3rem; }
+        .nav-container { padding: 0 20px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- 메인페이지와 동일한 헤더 -->
+  <header id="header">
+    <div class="container nav-container">
+      <div class="logo">
+        장미연립 재건축아파트<span class="logo-sub">계양구 작전동</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html#home">홈</a></li>
+          <li><a href="index.html#innovation">프로젝트 혁신</a></li>
+          <li><a href="index.html#" id="overview-btn">사업개요</a></li>
+          <li><a href="unit-info.html">평형안내</a></li>
+          <li><a href="index.html#design">단지 디자인</a></li>
+          <li><a href="index.html#location">위치</a></li>
+        </ul>
+      </nav>
+      <div class="header-contact">
+        <a href="tel:032-1234-5678" class="contact-btn">상담 문의 010-8921-9973</a>
+      </div>
+    </div>
+  </header>
+  <div class="unit-info-main page-animate" style="margin-top:90px;">
+    <div class="unit-hero">
+      <div class="unit-hero-title"><i class="fa-solid fa-ruler-combined"></i> 평형 안내</div>
+      <div class="unit-hero-desc">장미연립 재건축아파트의 다양한 평형 타입과 세대 구성을 한눈에 확인하세요.</div>
+    </div>
+    <div class="unit-summary">
+      <div class="unit-summary-item">
+        <div class="unit-summary-title">총 세대수</div>
+        <div class="unit-summary-value">72세대</div>
+      </div>
+      <div class="unit-summary-item">
+        <div class="unit-summary-title">대표 평형</div>
+        <div class="unit-summary-value">59A, 59B, 59C</div>
+      </div>
+      <div class="unit-summary-item">
+        <div class="unit-summary-title">최대 공급면적</div>
+        <div class="unit-summary-value">101.12㎡</div>
+      </div>
+      <div class="unit-summary-item">
+        <div class="unit-summary-title">분양면적</div>
+        <div class="unit-summary-value">101.12㎡</div>
+      </div>
+    </div>
+    <div class="unit-info-section">
+      <div class="unit-info-title">평형별 세대수 및 면적</div>
+      <table class="unit-table">
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>전용면적(㎡)</th>
+            <th>공급면적(㎡)</th>
+            <th>세대수</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>59A</td>
+            <td>59.84</td>
+            <td>84.32</td>
+            <td>36</td>
+          </tr>
+          <tr>
+            <td>59B</td>
+            <td>59.97</td>
+            <td>84.51</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td>59C</td>
+            <td>59.84</td>
+            <td>84.51</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td>합계</td>
+            <td colspan="2">&nbsp;</td>
+            <td>72</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="unit-desc">※ 평면도 및 세부 타입은 조합 사정에 따라 변경될 수 있습니다.<br><br>각 평면도를 크릭하면 큰 화면으로 볼 수 있습니다</div>
+        <div class="unit-cards">
+        <div class="unit-card">
+          <img src="images/59A-1.png" alt="59A-1 타입" class="unit-card-img">
+          <div class="unit-card-title">59A-1 타입</div>
+          <div class="unit-card-body">남향 위주 배치, 3Bay 구조, 실속형 공간 활용</div>
+        </div>
+        <div class="unit-card">
+          <img src="images/59A.png" alt="59A 타입" class="unit-card-img">
+          <div class="unit-card-title">59A 타입</div>
+          <div class="unit-card-body">남향 위주 배치, 3Bay 구조, 실속형 공간 활용</div>
+        </div>
+        <div class="unit-card">
+          <img src="images/59B-1.png" alt="59B-1 타입" class="unit-card-img">
+          <div class="unit-card-title">59B-1 타입</div>
+          <div class="unit-card-body">효율적 동선, 넓은 거실, 가족 중심 설계</div>
+        </div>
+        <div class="unit-card">
+          <img src="images/59B.png" alt="59B 타입" class="unit-card-img">
+          <div class="unit-card-title">59B 타입</div>
+          <div class="unit-card-body">효율적 동선, 넓은 거실, 가족 중심 설계</div>
+        </div>
+        <div class="unit-card">
+          <img src="images/59C.png" alt="59C 타입" class="unit-card-img">
+          <div class="unit-card-title">59C 타입</div>
+          <div class="unit-card-body">코너형 구조, 채광/통풍 극대화, 프리미엄 마감재</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 이미지 모달 -->
+  <div id="img-modal" class="img-modal-overlay" style="display:none;">
+    <span class="img-modal-close" id="img-modal-close">&times;</span>
+    <img class="img-modal-content" id="img-modal-img" src="" alt="원본 이미지">
+  </div>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var imgModal = document.getElementById('img-modal');
+    var imgModalImg = document.getElementById('img-modal-img');
+    var imgModalClose = document.getElementById('img-modal-close');
+    document.querySelectorAll('.unit-card-img').forEach(function(img) {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', function() {
+        imgModalImg.src = img.src;
+        imgModal.style.display = 'flex';
+      });
+    });
+    imgModalClose.addEventListener('click', function() {
+      imgModal.style.display = 'none';
+      imgModalImg.src = '';
+    });
+    imgModal.addEventListener('click', function(e) {
+      if (e.target === imgModal) {
+        imgModal.style.display = 'none';
+        imgModalImg.src = '';
+      }
+    });
+  });
+  </script>
+  <!-- 페이지 슬라이드 인 애니메이션 -->
+  <script>
+  // 페이지 슬라이드 인 애니메이션 (헤더 제외) 및 헤더 스크롤 효과
+  document.addEventListener('DOMContentLoaded', function() {
+    var page = document.querySelector('.unit-info-main.page-animate');
+    if(page) {
+      setTimeout(function() {
+        page.style.opacity = '1';
+        page.style.transform = 'translateX(0)';
+      }, 120);
+    }
+    // 헤더 스크롤 효과
+    window.addEventListener('scroll', function() {
+      var header = document.getElementById('header');
+      if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  });
+  </script>
+  <style>
+  html {
+    overflow-x: hidden;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  .unit-info-main.page-animate {
+    opacity: 0;
+    transform: translateX(100vw);
+    transition: transform 0.7s cubic-bezier(0.33,1,0.68,1), opacity 0.5s cubic-bezier(0.33,1,0.68,1);
+    will-change: transform, opacity;
+  }
+  </style>
+</body>
+</html>

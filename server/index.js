@@ -11,9 +11,9 @@ import { fileURLToPath } from 'url';
 
 
 const app = express();
-const PORT = process.env.PORT || 4000;
+const PORT = 4000;
 
-// 정적 파일 서비스 (server/public)
+// 정적 파일 서비스 (상위 폴더의 HTML, CSS, JS 등)
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 app.use(express.static(path.join(__dirname, 'public')));
@@ -118,12 +118,6 @@ app.post('/api/posts', async (req, res) => {
   const created_at = new Date().toISOString().slice(0, 10);
   const result = await db.run('INSERT INTO posts (writer, content, created_at) VALUES (?, ?, ?)', [writer, content, created_at]);
   res.json({ id: result.lastID, writer, content, created_at });
-});
-
-
-// 루트 경로에서 index.html 반환
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 initDB().then(() => {

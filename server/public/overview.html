@@ -1,1 +1,132 @@
-<!-- 이동된 overview.html, 기존 내용 복사 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사업개요 | 장미연립 재건축</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: #f8f8f8;
+            margin: 0;
+            color: #222;
+        }
+        .overview-section {
+            background: #f8f8f8;
+            padding: 60px 0;
+        }
+        .overview-section .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 6px 32px rgba(0,0,0,0.10);
+            padding: 48px 36px 36px 36px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .overview-section h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 32px;
+            letter-spacing: -1px;
+            color: #b51f5a;
+            text-align: center;
+        }
+        .overview-cards {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+        .overview-card-row {
+            display: flex;
+            align-items: stretch;
+            background: #f5f5fa;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(181,31,90,0.07);
+            overflow: hidden;
+        }
+        .overview-card-title {
+            flex: 0 0 160px;
+            background: linear-gradient(135deg, #b51f5a 60%, #ffdde4 100%);
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.08rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 18px 22px 18px 12px;
+            letter-spacing: 0.2px;
+        }
+        .overview-card-content {
+            flex: 1;
+            background: #fff;
+            color: #222;
+            font-size: 1.08rem;
+            display: flex;
+            align-items: center;
+            padding: 18px 18px 18px 22px;
+        }
+        @media (max-width: 700px) {
+            .overview-section .container {
+                padding: 24px 8px;
+            }
+            .overview-card-title {
+                flex: 0 0 100px;
+                font-size: 0.98rem;
+                padding: 14px 10px 14px 8px;
+            }
+            .overview-card-content {
+                font-size: 0.98rem;
+                padding: 14px 8px 14px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 헤더 제거, 사업개요만 남김 -->
+
+    <section class="overview-section">
+        <div class="container">
+            <h2>사업개요</h2>
+            <div class="overview-cards">
+                <div class="overview-card-row">
+                    <div class="overview-card-title">사업의 명칭</div>
+                    <div class="overview-card-content">장미연립수규모재건축사업조합</div>
+                </div>
+                <div class="overview-card-row">
+                    <div class="overview-card-title">위치</div>
+                    <div class="overview-card-content">인천시 계양구 작전동 683-1외 1필지</div>
+                </div>
+                <div class="overview-card-row">
+                    <div class="overview-card-title">총 사업면적</div>
+                    <div class="overview-card-content">2.291.00㎡</div>
+                </div>
+                <div class="overview-card-row">
+                    <div class="overview-card-title">총 연면적</div>
+                    <div class="overview-card-content">9,823.7249㎡</div>
+                </div>
+                <div class="overview-card-row">
+                    <div class="overview-card-title">사업규모</div>
+                    <div class="overview-card-content">아파트 72세대, 근린생활시설 11호실(지하 2층~지상 20층)</div>
+                </div>
+                <div class="overview-card-row">
+                    <div class="overview-card-title">주차대수</div>
+                    <div class="overview-card-content">80대 확장면적</div>
+                </div>
+                <div class="overview-card-row">
+                    <div class="overview-card-title">건축 연면적</div>
+                    <div class="overview-card-content">지상층 : 6,649.3496㎡, 지하층 : 3,403.7217㎡</div>
+                </div>
+                <div class="overview-card-row">
+                    <div class="overview-card-title">용적율</div>
+                    <div class="overview-card-content">290.24 %</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
