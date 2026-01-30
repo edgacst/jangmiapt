@@ -11,7 +11,7 @@ import { fileURLToPath } from 'url';
 
 
 const app = express();
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 // 정적 파일 서비스 (server/public)
 const __filename = fileURLToPath(import.meta.url);
