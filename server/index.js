@@ -1,13 +1,22 @@
 
+
 import express from 'express';
 import sqlite3 from 'sqlite3';
 import { open } from 'sqlite';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import session from 'express-session';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
 
 const app = express();
 const PORT = 4000;
+
+// 정적 파일 서비스 (상위 폴더의 HTML, CSS, JS 등)
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+app.use(express.static(path.join(__dirname, '..')));
 
 
 app.use(cors({
