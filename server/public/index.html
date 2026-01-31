@@ -907,9 +907,7 @@
     </style>
 </head>
 <body>
-    <!--메인이미지2개 -->
-    <img src="images/hero-bg.jpg">
-    <img src="images/hero-bg1.png">
+  
                 <!-- 공개게시판 모달 -->
                 <div class="modal-bg" id="boardModalBg">
                     <div class="board-modal-popup" id="boardModal">
@@ -926,49 +924,54 @@
                 <div class="modal-content">
                     <button class="modal-close" id="overview-modal-close" aria-label="닫기">&times;</button>
                     <div class="overview-section">
-                        <div class="container">
-                            <h2 style="display: flex; align-items: center; justify-content: center; gap: 12px;">
-  <span style="display: flex; align-items: center;">
-    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right:6px;">
-      <circle cx="16" cy="16" r="14" stroke="#b51f5a" stroke-width="2" fill="#fff0f6"/>
-      <path d="M16 8 L20 16 L16 24 L12 16 Z" fill="#b51f5a"/>
-      <circle cx="16" cy="16" r="3" fill="#fff" stroke="#b51f5a" stroke-width="1"/>
-    </svg>
-    사업개요
-  </span>
-</h2>
-                            <div class="overview-cards">
-                                <div class="overview-card-row">
-                                    <div class="overview-card-title">사업의 명칭</div>
-                                    <div class="overview-card-content">장미연립수규모재건축사업조합</div>
-                                </div>
-                                <div class="overview-card-row">
-                                    <div class="overview-card-title">위치</div>
-                                    <div class="overview-card-content">인천시 계양구 작전동 683-1외 1필지</div>
-                                </div>
-                                <div class="overview-card-row">
-                                    <div class="overview-card-title">총 사업면적</div>
-                                    <div class="overview-card-content">2.291.00㎡</div>
-                                </div>
-                                <div class="overview-card-row">
-                                    <div class="overview-card-title">총 연면적</div>
-                                    <div class="overview-card-content">9,823.7249㎡</div>
-                                </div>
-                                <div class="overview-card-row">
-                                    <div class="overview-card-title">사업규모</div>
-                                    <div class="overview-card-content">아파트 72세대, 근린생활시설 11호실(지하 2층~지상 20층)</div>
-                                </div>
-                                <div class="overview-card-row">
-                                    <div class="overview-card-title">주차대수</div>
-                                    <div class="overview-card-content">80대 확장면적</div>
-                                </div>
-                                <div class="overview-card-row">
-                                    <div class="overview-card-title">건축 연면적</div>
-                                    <div class="overview-card-content">지상층 : 6,649.3496㎡, 지하층 : 3,403.7217㎡</div>
-                                </div>
-                                <div class="overview-card-row">
-                                    <div class="overview-card-title">용적율</div>
-                                    <div class="overview-card-content">290.24 %</div>
+                        <div class="container" style="display: flex; flex-wrap: wrap; align-items: stretch; gap: 32px;">
+                            <div style="flex:1 1 320px; min-width:240px; display:flex; align-items:center; justify-content:center; background:#faf9fa; border-radius:18px; overflow:hidden; box-shadow:0 2px 16px rgba(0,0,0,0.06); min-height:320px;">
+                                <img src="images/hero-bg1.png" alt="고급스러운 아파트 외관" style="width:100%; height:auto; max-width:340px; object-fit:cover; border-radius:16px; box-shadow:0 2px 12px rgba(0,0,0,0.08);">
+                            </div>
+                            <div style="flex:2 1 400px; min-width:260px; display:flex; flex-direction:column; justify-content:center;">
+                                <h2 style="display: flex; align-items: center; gap: 12px; margin-bottom:24px;">
+                                  <span style="display: flex; align-items: center;">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right:6px;">
+                                      <circle cx="16" cy="16" r="14" stroke="#b51f5a" stroke-width="2" fill="#fff0f6"/>
+                                      <path d="M16 8 L20 16 L16 24 L12 16 Z" fill="#b51f5a"/>
+                                      <circle cx="16" cy="16" r="3" fill="#fff" stroke="#b51f5a" stroke-width="1"/>
+                                    </svg>
+                                    사업개요
+                                  </span>
+                                </h2>
+                                <div class="overview-cards">
+                                    <div class="overview-card-row">
+                                        <div class="overview-card-title">사업의 명칭</div>
+                                        <div class="overview-card-content">장미연립수규모재건축사업조합</div>
+                                    </div>
+                                    <div class="overview-card-row">
+                                        <div class="overview-card-title">위치</div>
+                                        <div class="overview-card-content">인천시 계양구 작전동 683-1외 1필지</div>
+                                    </div>
+                                    <div class="overview-card-row">
+                                        <div class="overview-card-title">총 사업면적</div>
+                                        <div class="overview-card-content">2.291.00㎡</div>
+                                    </div>
+                                    <div class="overview-card-row">
+                                        <div class="overview-card-title">총 연면적</div>
+                                        <div class="overview-card-content">9,823.7249㎡</div>
+                                    </div>
+                                    <div class="overview-card-row">
+                                        <div class="overview-card-title">사업규모</div>
+                                        <div class="overview-card-content">아파트 72세대, 근린생활시설 11호실(지하 2층~지상 20층)</div>
+                                    </div>
+                                    <div class="overview-card-row">
+                                        <div class="overview-card-title">주차대수</div>
+                                        <div class="overview-card-content">80대 확장면적</div>
+                                    </div>
+                                    <div class="overview-card-row">
+                                        <div class="overview-card-title">건축 연면적</div>
+                                        <div class="overview-card-content">지상층 : 6,649.3496㎡, 지하층 : 3,403.7217㎡</div>
+                                    </div>
+                                    <div class="overview-card-row">
+                                        <div class="overview-card-title">용적율</div>
+                                        <div class="overview-card-content">290.24 %</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1037,23 +1040,33 @@
         document.addEventListener('DOMContentLoaded', function() {
             const hero = document.querySelector('.hero');
             if (hero) {
+                // 한 번에 여러 개 눈송이 생성
                 function createSnowflake() {
                     const snowflake = document.createElement('span');
                     snowflake.className = 'snowflake';
-                    snowflake.innerHTML = '&#10052;'; // 유니코드 눈송이
-                    // 랜덤 위치, 크기, 속도
-                    const size = Math.random() * 18 + 12;
+                    // 다양한 눈송이 모양
+                    const snowShapes = ['\u2744', '\u2745', '\u2746', '\u2743', '\u2742', '\u2740', '\u2741', '\u2746', '\u2744', '\u2745'];
+                    snowflake.innerHTML = snowShapes[Math.floor(Math.random() * snowShapes.length)];
+                    // 랜덤 위치, 크기, 속도, 투명도, 회전
+                    const size = Math.random() * 22 + 10; // 더 다양한 크기
                     snowflake.style.left = Math.random() * hero.offsetWidth + 'px';
                     snowflake.style.fontSize = size + 'px';
-                    snowflake.style.opacity = (Math.random() * 0.4 + 0.6).toFixed(2);
-                    snowflake.style.animationDuration = (Math.random() * 2 + 4) + 's';
+                    snowflake.style.opacity = (Math.random() * 0.5 + 0.5).toFixed(2); // 더 밝은 눈도 섞임
+                    snowflake.style.animationDuration = (Math.random() * 3 + 3) + 's'; // 3~6초
                     snowflake.style.animationDelay = Math.random() * 2 + 's';
+                    snowflake.style.filter = `blur(${Math.random() * 1.5}px)`;
+                    // 랜덤 회전 방향
+                    snowflake.style.transform = `rotate(${Math.random() * 360}deg)`;
                     hero.appendChild(snowflake);
                     setTimeout(() => {
                         snowflake.remove();
-                    }, 6000);
+                    }, 7000);
                 }
-                setInterval(createSnowflake, 350);
+                // 눈송이 밀도 증가: 120ms마다 2~4개 생성
+                setInterval(() => {
+                    const count = Math.floor(Math.random() * 3) + 2;
+                    for (let i = 0; i < count; i++) createSnowflake();
+                }, 120);
             }
             // 사업개요 버튼 클릭 시 모달로 띄우기
             var btn = document.getElementById('overview-btn');
@@ -1171,19 +1184,19 @@
     <section class="section design-section" id="design">
         <div class="container">
             <div class="design-showcase">
-                <div class="design-image" style="background-image: url('https://images.unsplash.com/photo-1567496898669-ee935f003f30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1771&q=80')"></div>
-                
-                <div class="design-content">
-                    <h2>심플하면서도 고급스러운 디자인 철학</h2>
-                    <p>시간이 지나도 변치 않는 클래식한 디자인과 현대적인 기능의 완벽한 조화. 장미연립 재건축아파트는 최고급 마감 재료와 세심한 설계로 완성되었습니다.</p>
-                    
-                    <ul class="design-features">
-                        <li><i class="fas fa-check"></i> 대형 창호를 통한 최적의 채광과 전망</li>
-                        <li><i class="fas fa-check"></i> 고품격 인테리어 마감 재료 사용</li>
-                        <li><i class="fas fa-check"></i> 효율적인 평면 설계로 공간 활용도 극대화</li>
-                        <li><i class="fas fa-check"></i> 친환경 건축자재와 에너지 절약 시스템</li>
-                    </ul>
-                </div>
+                                <div style="width:100%; display:flex; justify-content:center; margin:24px 0;">
+                                    <img src="images/59b-a.png" alt="아파트 단지 조감도" style="max-width:700px; width:100%; height:auto; border-radius:16px; box-shadow:0 4px 32px rgba(0,0,0,0.13);">
+                                </div>
+                                <div class="design-content">
+                                        <h2>심플하면서도 고급스러운 디자인 철학</h2>
+                                        <p>시간이 지나도 변치 않는 클래식한 디자인과 현대적인 기능의 완벽한 조화. 장미연립 재건축아파트는 최고급 마감 재료와 세심한 설계로 완성되었습니다.</p>
+                                        <ul class="design-features">
+                                                <li><i class="fas fa-check"></i> 대형 창호를 통한 최적의 채광과 전망</li>
+                                                <li><i class="fas fa-check"></i> 고품격 인테리어 마감 재료 사용</li>
+                                                <li><i class="fas fa-check"></i> 효율적인 평면 설계로 공간 활용도 극대화</li>
+                                                <li><i class="fas fa-check"></i> 친환경 건축자재와 에너지 절약 시스템</li>
+                                        </ul>
+                                </div>
             </div>
         </div>
     </section>
