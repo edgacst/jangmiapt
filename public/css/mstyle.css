@@ -1,0 +1,129 @@
+.design-showcase {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.design-img-large {
+  flex: 1 1 62%;
+  max-width: 850px;
+  min-width: 320px;
+  width: 65%;
+  height: auto;
+}
+.design-content {
+  flex: 1 1 38%;
+  max-width: 480px;
+}
+
+/* ---- 모바일 최적화 ---- */
+@media (max-width: 700px) {
+  html, body {
+    font-size: 15px;
+  }
+  .design-showcase {
+    flex-direction: column !important;
+    gap: 12px !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+  }
+  .design-img-large,
+  .design-showcase img,
+  img {
+    max-width: 100% !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 auto 18px !important;
+    display: block !important;
+  }
+  .design-content, .container, .overview-section .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 8px !important;
+    text-align: left !important;
+    word-break: keep-all;
+  }
+  /* 버튼/폼 */
+  .btn-primary, .btn-secondary, .contact-btn {
+    font-size: 1.05rem !important;
+    padding: 14px 0 !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 8px 0 !important;
+    border-radius: 7px !important;
+    display: block !important;
+  }
+  input[type="text"], input[type="tel"], input[type="email"], button[type="submit"] {
+    font-size: 1rem !important;
+    padding: 14px 12px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  /* 헤더/타이틀 */
+  header {
+    height: 64px !important;
+    padding: 0 8px !important;
+  }
+  .logo {
+    font-size: 1.15rem !important;
+    line-height: 1.1;
+  }
+  .logo-sub {
+    font-size: 0.7rem !important;
+  }
+  .header-contact { gap: 8px !important; }
+
+  /* 섹션/타이틀 폰트 */
+  .section, .section.design-section, .cta-section {
+    padding: 32px 0 !important;
+  }
+  .hero-title {
+    font-size: 1.35rem !important;
+    line-height: 1.18;
+  }
+  .hero-subtitle {
+    font-size: 1rem !important;
+  }
+  .hero-tag {
+    font-size: 0.9rem !important;
+    margin-bottom: 10px !important;
+    padding: 6px 10px !important;
+  }
+  h1, h2, .cta-title, .section-title h2 {
+    font-size: 1.12rem !important;
+  }
+  body, .design-content, .section-title h2,
+  .cta-title, .overview-section h2,
+  p, li {
+    font-size: 1rem !important;
+  }
+}
+@media (max-width: 700px) {
+  .design-showcase {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .design-content, .design-img-large, .design-showcase img {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 0 10px !important;
+    display: block !important;
+  }
+  .container, .overview-section .container {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+  body {
+    overflow-x: hidden !important;
+  }
+}
