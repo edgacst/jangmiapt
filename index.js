@@ -128,6 +128,7 @@ app.get('/', (req, res) => {
   res.send('장미APT 백엔드 서버가 정상 구동 중입니다.');
 });
 
+
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
